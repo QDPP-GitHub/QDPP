@@ -91,7 +91,7 @@ bash run_2m_vs_1z.sh
 
 - How can I find codes related to Q-DPP model? / Why do I only find `ma-gym` and `pymarl` packages? 
 
-> Q-DPP is based on [pymarl](https://github.com/oxwhirl/pymarl). We implement codes related to Q-DPP in `./pymarl/src/` with *qdpp* in their file names, including `./pymarl/src/controllers/qdpp_controller.py`, `./pymarl/src/learners/qdppq_learner.py` and  `./pymarl/src/modules/mixers/qdpp.py`.
+> We have added Q-DPP into [pymarl](https://github.com/oxwhirl/pymarl). The implementation is in `./pymarl/src/` with *qdpp* in their file names, including `./pymarl/src/controllers/qdpp_controller.py`, `./pymarl/src/learners/qdppq_learner.py` and  `./pymarl/src/modules/mixers/qdpp.py`.
 
 
 
