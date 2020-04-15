@@ -1,5 +1,5 @@
 ### What is Q-DPP
-Q-DPP is a a novel extension of determinantal point process (DPP) to multi-agent reinforcement learning problems. Q-DPP promotes agents to acquire diverse behavioral models; this allows a natural factorization of the joint Q-functions with no need for a priori structural constraints that are often required by centralized-training-decentralized-exeuction methods. A bonus of Q-DPP is that it offers an unified view of current major solvers including VDN, QMIX, QTRAN.
+> Q-DPP is a a novel extension of determinantal point process (DPP) to multi-agent reinforcement learning problems. Q-DPP promotes agents to acquire diverse behavioral models; this allows a natural factorization of the joint Q-functions with no need for a priori structural constraints that are often required by centralized-training-decentralized-exeuction methods. A bonus of Q-DPP is that it offers an unified view of current major solvers including VDN, QMIX, QTRAN.
 
 
 
@@ -39,7 +39,7 @@ bash head_run.sh
 
 ### How is Q-DPP working
 
-We test Q-DPP on five different games against popular baseline models, and present the executable commands for reproducibility and corresponding experimental performance.
+> We test Q-DPP on five different games against popular baseline models, and present the executable commands for reproducibility and corresponding experimental performance.
 
 |              Game               |   State    |
 | :-----------------------------: | :--------: |
@@ -77,7 +77,7 @@ bash run_exp3.sh
 
 ![pp](pp.jpeg)
 
-- StarCraft II
+- StarCraft II (Details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf).)
 
 ```bash
 bash run_2m_vs_1z.sh
@@ -85,7 +85,7 @@ bash run_2m_vs_1z.sh
 
 ![2m_vs_1z](2m_vs_1z.jpeg)
 
-Details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf). 
+
 
 ### Q&A:
 
@@ -98,9 +98,7 @@ Details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf)
 - Why do my local codes fail to run?
 
 > Please check your environment, especially `ma-gym` package. Since we modified some parts of the package, please make sure that you installed `ma-gym` with the one that we provided. If you are testing on StarCraft environment, you can execute the following command in your terminal to check if SC2 is installed:
-
 ```bash
 echo $SC2PATH
 ```
-
 > A valid directory is expected. Empirically, the provided codes should work well with PyTorch v1.4.0. Due to NVIDIA driver issues, it is still possible to see incompatible datatype errors raised. We recommend to check if data are copied to correct devices via commands like `.cuda()` or `.cpu()`. 
