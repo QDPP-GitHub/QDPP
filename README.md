@@ -1,5 +1,5 @@
 ### What is Q-DPP
-> Q-DPP is a a novel extension of determinantal point process (DPP) to multi-agent reinforcement learning problems. Q-DPP promotes agents to acquire diverse behavioral models; this allows a natural factorization of the joint Q-functions with no need for a priori structural constraints that are often required by centralized-training-decentralized-exeuction methods. A bonus of Q-DPP is that it offers an unified view of current major solvers including VDN, QMIX, QTRAN.
+> Q-DPP is a a novel extension of determinantal point process (DPP) to multi-agent reinforcement learning problems. Q-DPP promotes agents to acquire diverse behavioral models; this allows a natural factorization for the joint Q-functions with no needs for a priori structural constraints, which are often required by centralized-training-decentralized-exeuction methods. A bonus of Q-DPP is that it offers an unified view of current major solvers including VDN, QMIX, and QTRAN.
 
 
 
@@ -30,16 +30,16 @@ python src/main.py --config=qdpp --env-config=grid
 python src/main.py --config=qmix --env-config=grid  with env_args.game_name=Spread-v0 
 ```
 
-- Run the experiments in parallel:
+- Run all experiments in parallel:
 ```bash
 cd pymarl/scripts
 bash head_run.sh
 ```
 
 
-### How is Q-DPP working
+### The Performance of Q-DPP
 
-> We test Q-DPP on five different games against popular baseline models, and present the executable commands for reproducibility and corresponding experimental performance.
+> We evaluate Q-DPP on five different games against popular baseline models, and present the executable commands for reproducibility and corresponding experimental performance.
 
 |              Game               |   State    |
 | :-----------------------------: | :--------: |
@@ -51,7 +51,7 @@ bash head_run.sh
 
 
 
-- Multi-Step Matrix Game
+- Stochastic Normal-form Game
 
 ```bash
 python src/main.py --config=qdpp_nmatrix --env-config=nmatrix_idx with embedding_init=normal
@@ -77,7 +77,7 @@ bash run_exp3.sh
 
 ![pp](pp.jpeg)
 
-- StarCraft II (Details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf).)
+- StarCraft II (details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf).)
 
 ```bash
 bash run_2m_vs_1z.sh
