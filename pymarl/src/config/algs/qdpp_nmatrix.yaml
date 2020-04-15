@@ -1,0 +1,52 @@
+# --- DPP specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "project_sample"
+epsilon_start: 1.0
+epsilon_finish: 0.02 # 0.05, 0.02, 0.01
+epsilon_anneal_time: 30000 # 50000, 100000, 200000
+epsilon_decay_scheme: 'linear' # linear
+
+runner: "episode"
+
+buffer_size: 5000
+
+# update the target network every {} episodes
+target_update_interval: 100
+
+# use the Q_Learner to train
+agent_output_type: "q"
+learner: "qdpp_q_learner"
+double_q: True
+mixer: "qdpp"
+mixing_embed_dim: 32
+hypernet_layers: 2
+hypernet_embed: 64
+lr: 0.0004 # Learning rate for agents
+critic_lr: 0.0004 # Learning rate for critics
+
+
+mac: "qdpp_mac"
+agent: "rnn" #rnn
+
+obs_agent_id: True # Include the agent's one_hot id in the observation
+obs_last_action: False # Include the agent's last action (one_hot) in the observation
+
+q_max: 250.
+q_min: -250.
+weight_decay: 0.001
+embedding_init: 'normal' 
+embedding_normalization: False
+test_project: True
+
+
+beta_balance_rate: 0.01 
+# xavier_uniform
+# xavier_normal
+# kaiming_uniform
+# kaiming_normal
+# orthogonal
+# unifrom
+# normal
+
+name: "dpp"

@@ -1,0 +1,13 @@
+*.pytest_cache
+*.egg-info
+*.egg
+*.pyc
+*.coverage
+/logs
+/dist
+/build
+/examples/recordings
+*~
+
+# Pycharm
+.idea

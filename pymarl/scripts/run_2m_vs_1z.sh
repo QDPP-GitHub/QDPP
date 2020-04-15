@@ -1,0 +1,1 @@
+python3 ../src/main.py --config=qdpp --env-config=sc2 with env_args.map_name=2m_vs_1z

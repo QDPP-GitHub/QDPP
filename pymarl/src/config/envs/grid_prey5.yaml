@@ -1,0 +1,12 @@
+env: grid
+
+env_args:
+  game_name: "PredatorPrey5x5-v01"
+  reward_normalizer: 1.
+
+test_nepisode: 32
+test_interval: 1000
+log_interval: 500
+runner_log_interval: 500
+learner_log_interval: 500
+t_max: 5000000
