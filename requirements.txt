@@ -51,7 +51,6 @@ sacred==0.7.2
 scipy==1.1.0
 six==1.11.0
 sk-video==1.1.10
-smac==0.1.0b1
 snakeviz==1.0.0
 tensorboard-logger==0.1.0
 torch==1.3.1
@@ -62,3 +61,4 @@ urllib3==1.23
 websocket-client==0.53.0
 whichcraft==0.5.2
 wrapt==1.10.11
+git+https://github.com/oxwhirl/smac.git
