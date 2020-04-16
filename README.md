@@ -25,7 +25,7 @@ bash install_sc2.sh
 - Run quick examples:
 
 ```python
-cd ../pymarl
+cd pymarl
 python src/main.py --config=qdpp --env-config=grid
 python src/main.py --config=qmix --env-config=grid  with env_args.game_name=Spread-v0 
 ```
@@ -54,6 +54,7 @@ bash head_run.sh
 - Stochastic Normal-form Game
 
 ```bash
+cd pymarl
 python src/main.py --config=qdpp_nmatrix --env-config=nmatrix_idx with embedding_init=normal
 ```
 
@@ -62,7 +63,11 @@ python src/main.py --config=qdpp_nmatrix --env-config=nmatrix_idx with embedding
 - Blocker Game, Coordinated Navigation, and Predator-Prey
 
 ```bash
-bash run_exp3.sh
+cd pymarl
+python src/main.py --config=qdpp_prey --env-config=grid_prey5
+python src/main.py --config=qdpp_prey --env-config=grid_prey7
+python src/main.py --config=qdpp_spread --env-config=grid_spread
+python src/main.py --config=qdpp_blocker --env-config=grid
 ```
 
 > Blocker Game:
@@ -80,7 +85,8 @@ bash run_exp3.sh
 - StarCraft II (details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf).)
 
 ```bash
-bash run_2m_vs_1z.sh
+cd pymarl
+python src/main.py --config=qdpp --env-config=sc2 with env_args.map_name=2m_vs_1z
 ```
 
 ![2m_vs_1z](2m_vs_1z.jpeg)
