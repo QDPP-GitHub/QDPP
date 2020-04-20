@@ -82,7 +82,7 @@ python src/main.py --config=qdpp_blocker --env-config=grid
 
 ![pp](pp.jpeg)
 
-- Initial results on StarCraft II (details of Deep Q-DPP can be found in [results_on_qdpp.pdf](results_on_qdpp.pdf).)
+- Initial results on StarCraft II (details of Deep Q-DPP can be found in [Deep_QPP.pdf](results_on_qdpp.pdf).)
 
 ```bash
 cd pymarl
